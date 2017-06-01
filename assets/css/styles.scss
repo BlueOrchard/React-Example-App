@@ -1,0 +1,222 @@
+$mainColor: #5363b7;
+$subColor: #7b89d6;
+$bgColor: #FFF;
+$lightbg: #f3f3f3;
+
+$menuColor: #333;
+$menuHover: #4c4c4c;
+
+$shadow: 0px 2px 3px rgba(0, 0, 0, 0.13);
+
+$padding: 15px;
+$margin: 15px;
+$paddingButton: 10px 15px;
+
+$sidebarWidth: 250px;
+$contentWidth: calc(100% - 250px);
+$headerHeight: 60px;
+
+/* Reset box-sizing to border-box */
+html {
+  box-sizing: border-box;
+  color: #404040;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* End reset */
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+a:visited{
+    color: $mainColor;
+}
+
+.header{
+    background: $bgColor;
+    box-shadow: $shadow;
+    height: $headerHeight;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.topbar{
+    margin-left: auto;
+}
+
+.topbar{
+    div{
+        padding: $paddingButton;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $mainColor;
+        transition: 0.25s all;
+        border-radius: 25px;
+    }
+
+    div:hover{
+        background: $lightbg;
+    }
+}
+
+.topbar{
+    i {
+        vertical-align: bottom;
+        font-size: 18px;
+        margin-right: 2px;
+    }
+}
+
+.logo{
+    padding: 15px;
+    background: #5363b7;
+    width: $sidebarWidth;
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    height: 100%;
+}
+
+.content-container{
+    display: flex;
+}
+
+.sidebar{
+    width: $sidebarWidth;
+    height: 100vh;
+    box-shadow: $shadow;
+    background: $menuColor;
+}
+
+.optionslist{
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+
+    li{
+        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #272727;
+        cursor: pointer;
+        font-size: 14px;
+        transition: 0.25s all;
+    }
+
+    li:hover, .selected{
+        background: $menuHover!important;
+    }
+
+    i{
+        line-height: 10px;
+        font-size: 20px;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    a{
+        color: #FFF;
+        text-decoration: none;
+        display: block;
+        padding: $padding;
+    }
+}
+
+.main{
+    width: $contentWidth;
+}
+
+.maintitle{
+    font-size: 35px;
+    font-weight: 300;
+    border-bottom: 1px solid #DDD;
+    padding: 5px 0;
+    margin: 0 0 10px;
+}
+
+.orderform{
+    padding: $padding;
+    border-bottom: 1px solid #DDD;
+}
+
+.footer{
+    width: 100%;
+    min-height: 300px;
+    background: $menuColor;
+    border-top: 5px solid $mainColor;
+}
+
+.flex-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orderform{
+    .item-order{
+        margin-top: 10px;
+    }
+
+    .flex-1{
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .flex-4{
+        width: 25%;
+        padding: 0 5px;
+    }
+
+    label{
+        color: $mainColor;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    input{
+        width: 100%;
+        outline: 0;
+        background: #eaeaea;
+        border: 0;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin-top: 2px;
+    }
+    
+    button{
+        background: $mainColor;
+        color: #FFF;
+        border: 0;
+        padding: $paddingButton;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: 0.25s all;
+    }
+
+    button:hover{
+        background: $subColor;
+    }
+
+    .submitcancel{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    .cancelbutton{
+        background: $bgColor;
+        color: $mainColor;
+        font-weight: 600;
+    }
+
+    .cancelbutton:hover{
+        background: $bgColor;
+        color: $subColor;
+    }
+}
